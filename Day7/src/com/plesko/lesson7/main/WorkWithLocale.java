@@ -17,10 +17,6 @@ public class WorkWithLocale {
         String language = "";
         String country = "";
         switch (input) {
-            case '1':
-                language = "en";
-                country = "US";
-                break;
             case '2':
                 language = "be";
                 country = "BY";
@@ -33,7 +29,7 @@ public class WorkWithLocale {
                 System.out.println("This command was not found.");
         }
         Locale locale = new Locale(language, country);
-        ResourceBundle  resourceBundle = ResourceBundle.getBundle("property.message", locale);
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("property.message", locale);
         String str1 = resourceBundle.getString("key1");
         System.out.println(str1);
         String str2 = resourceBundle.getString("key2");
